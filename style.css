@@ -42,7 +42,7 @@ hr {
 }
 
 header {
-  background-color: #999;
+  background-color: black;
   background-image: url(img/background.jpg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -52,11 +52,6 @@ header {
   background-size: cover;
   margin-bottom: 4em;
   text-align: center;
-  height: 1000px;
-  width: 800px;
-  padding-left: : 500px;
-  padding-right: 200px;
-
 }
 
 header h1 {
