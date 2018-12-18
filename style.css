@@ -1,7 +1,7 @@
 *, *:before, *:after {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
- 
+
 body {
   font: 100% sans-serif;
   margin: 0em;
@@ -50,10 +50,10 @@ header {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  margin-bottom: 4em;
+  margin-bottom: 20em;
   text-align: center;
   height: 500px;
- 
+
 }
 
 header h1 {
@@ -109,12 +109,12 @@ footer hr {
   header {
     height: 700px;
   }
-  
+
   header h1 {
     font-size: 3.2em;
     top: 540px;
   }
-  
+
   header p {
     top: 530px;
     font-size: 1.5em;
@@ -135,7 +135,7 @@ footer hr {
   clear: both;
   margin-right: -1%;
   margin-left:  -1%;
-  
+
 }
 
 .row:before,
@@ -315,10 +315,9 @@ footer hr {
     padding: 6em;
     text-align: left;
   }
-  
+
   .spotlight h1, .spotlight p {
     text-align: left;
   }
-  
-}
 
+}
