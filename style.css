@@ -1,4 +1,4 @@
-*, *:before, *:after {
+black*, *:before, *:after {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
@@ -42,8 +42,8 @@ hr {
 }
 
 header {
-  background-color: black;
-  background-image: url(img/background.jpg);
+  background-color: white;
+  background-image: url(img/Scotland_backnforth.jpg);
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -51,9 +51,7 @@ header {
   background-size: cover;
   margin-bottom: 4em;
   text-align: center;
-  height: 1000px;
-  width: 800px;
-  background-position: 0% center;
+  background-position: center;
 }
 
 header h1 {
@@ -69,7 +67,7 @@ header h1 {
 }
 
 header p {
-  color: #fff;
+  color: white;
   font-size: 1.1em;
   padding-bottom: 1.3em;
   padding-top: .5em;
@@ -101,13 +99,10 @@ footer hr {
   margin-bottom: 1em;
 }
 
-.center {
-  text-align: center;
-}
 
 @media screen and (min-width: 50em) {
   header {
-    height: 700px;
+    height: 750px;
   }
 
   header h1 {
@@ -126,7 +121,7 @@ footer hr {
 
 .container {
   max-width: 50em;
-  width:92%;
+  width:100%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -179,6 +174,11 @@ footer hr {
 }
 
 /* -------------------Custom Blocks----------------- */
+
+.center
+{
+text-align: center;
+}
 
 /* Gallery */
 
