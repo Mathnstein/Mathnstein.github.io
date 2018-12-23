@@ -36,10 +36,12 @@ img {
 }
 
 hr {
-  border-top: 1px solid #ccc;
+  border-top: 2px solid #ccc;
   border-bottom: none;
   margin-top: 3em;
   margin-bottom: 2em;
+  color: #AAAAAA;
+
 }
 
 header {
