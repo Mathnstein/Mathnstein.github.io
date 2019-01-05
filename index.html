@@ -1,197 +1,628 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<title>Cody's Website</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<!--Custom fonts. To improve load times, remove this and update the h1 styling in style.css-->
-	<link href='http://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
-	<!-- stylesheets -->
-	<link rel="stylesheet" href="style.css" type="text/css" />
-	<!-- favicon -->
-	<link rel="shortcut icon" href="img/favicon.ico">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Website Title -->
+    <title>Cody Griffith - Professional Mathematician</title>
+    <!-- Bootstrap -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Font-Awesome -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<!-- Lightbox -->
+	<link href="assets/lightbox/css/lightbox.css" rel="stylesheet">
+    <!-- Text Rotator-->
+	<link href="assets/textrotator/simpletextrotator.css" rel="stylesheet">
+	<!-- FlexSlider -->
+    <link href="assets/flexslider/flexslider.css" rel="stylesheet">
+	<!-- Theme Style -->
+    <link href="css/style.css" rel="stylesheet">
+	<!-- Animations -->
+    <link href="css/animate.css" rel="stylesheet">
+	<!-- Custom Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="assets/html5shiv/html5shiv.js"></script>
+    <script src="assets/respond/respond.min.js"></script>
+    <![endif]-->
+  </head>
+    <body id="top">
 
-	<!-- just in case viewer is using Internet Explorer -->
-	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<meta name="viewport" content="initial-scale=1.0, width=device-width">
-
-</head>
-
-<body>
-
-	<!-- Header-->
-	<header>
-		<h1>Cody Griffith</h1>
-		<p>Mathematical Research Scientist</p>
-	</header>
-
-	<div class="container">
-
-		<!-- Introduction-->
-		<section class="center">
-			<h1>
-				Welcome! <img src="img/Me.jpg" style="float: left; width:400px;height:500px;margin-right:15px;">
-			</h1>
-			<p>
-				This website is home to my projects, resume and amateur photography from my world travels.
-				This is a good place to introduce yourself. What do you love to do? Where are you from? What is your current job?
-				This also might be a good place to link to your resume, email, or portfolio as well.<br />
-				<a href="https://www.linkedin.com/in/cody-griffith-8771a8145/">Linked In</a><br />
-				<a href="https://mathnstein.shinyapps.io/dssg_app/">Shiny DSSG App</a><br />
-				<a href="https://github.com/Mathnstein/Mathnstein.github.io/files/Resume_6_18_18.pdf">Resume</a>
-				<br style="clear:both" />
-			</p>
-		</section>
+      <!-- ****************************** Preloader ************************** -->
+      <div id="preloader"></div>
 
 
-		<hr>
+	  	<!-- ==========================
+        HEADER SECTION
+        =========================== -->
+        <header id="home">
+		    <!-- creative menu -->
+            <div class="container-fluid">
+              <div class="row">
+                <div class="menu-wrap">
+				<nav class="menu">
+				    <!-- Menu Links -->
+					<div class="icon-list">
+						<a href="index.html#home"><i class="fa fa-fw fa-home"></i><span>Home</span></a>
+						<a href="index.html#about"><i class="fa fa-fw fa-quote-left"></i><span>About</span></a>
+						<a href="index.html#service"><i class="fa fa-fw fa-globe"></i><span>Travels</span></a>
+						<a href="index.html#portfolio"><i class="fa fa-fw fa-picture-o"></i><span>Portfolio</span></a>
+						<a href="index.html#blog"><i class="fa fa-fw fa-rss"></i><span>Blog</span></a>
+						<a href="index.html#contact"><i class="fa fa-fw fa-envelope-o"></i><span>Contact</span></a>
+					</div>
+				</nav>
+			    </div>
+			    <button class="menu-button" id="open-button"></button><!-- menu button -->
+              </div><!--/row-->
+            </div><!--/container-->
+		  <!-- Header Image -->
+          <section class="hero" id="hero">
+            <div class="container">
+			  <!-- Slider Button (don't edit!)-->
+              <div class="row">
+                <div class="col-md-12 text-right navicon">
+                  <a id="nav-toggle" class="nav_slide_button" href="index.html#"><span></span></a>
+                </div>
+              </div>
+			  <!-- HEADER HEADLINE -->
+              <div class="row">
+                <div class="col-md-8 col-md-offset-1 inner">
+                  <h1 class="animated fadeInDown">
+                    <span style="color:#E04343;">C</span>ody<br/>
+                    <span><span style="color:#FFE800">G</span>riffith</span>
+                  </h1><!-- Title -->
+                  <h3 class="animated fadeInUp delay-05s"><span class="rotate">Mathematician,Snowboarder,Traveler</span></h3><!-- Text Rotator -->
+                </div>
+              </div>
+			  <!-- Learn More Button -->
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                  <a href="index.html#about" class="scrollto wow fadeInUp delay-5s ">
+			            <p><span style="color:#E04343;">SEE MORE</span</p>
+			            <p class="scrollto--arrow"><img src="img/scroll-down.png" alt="scroll down arrow"></p>
+			        </a>
+                </div>
+              </div>
+            </div>
+          </section>
+		  <!-- Header Image End -->
+        </header>
+		<!-- ==========================
+        HEADER SECTION END
+        =========================== -->
 
-		<!-- Gallery Block-->
-		<section class="gallery">
-			<h1 class="center">Gallery</h1>
-			<div class="row">
-				<a href="#"><img src="img/Windmill.jpg" class="grid-2"></a>
-				<a href="#"><img src="img/Scotland_pan.jpg" class="grid-2"></a>
-				<a href="#"><img src="img/Bridge.jpg" class="grid-2"></a>
-			</div>
-		</section>
-
-		<hr>
 
 
 
-	<!-- Spotlight -->
-	<section class="spotlight">
-		<div class="container">
-			<div class="row">
-				<div class="grid-3">
-					<img src="img/spotlight.jpg">
+		<!-- ==========================
+        ABOUT SECTION
+        =========================== -->
+        <section class="intro text-center section-padding color-bg" id="about">
+          <div class="container">
+		    <!-- WELCOME TEXT -->
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 wp1">
+                <h1 class="arrow">A little <span>about</span> me</h1><!-- Headline -->
+				<!-- about / welcome text -->
+                <p>
+                  After my Bachelor's in Denver, CO and my Master's in Vancouver, BC, I found myself in San Jose, canvas
+                  working for <a href="https://908devices.com//">908 Devices</a>. Here I work on algorithm design for
+                  mass spectrometry and all of the cool things that come with it!<br/>
+                  On my free time, I'm either snowboarding, surfing or on some random world adventure.
+                  This website is home to my projects, resume and amateur photography from my world travels.<br/>
+				          <a href="https://www.linkedin.com/in/cody-griffith-8771a8145/">Linked In</a><br/>
+				          <a href="https://mathnstein.shinyapps.io/dssg_app/">Shiny DSSG App</a><br />
+				          <a href="https://github.com/Mathnstein/Mathnstein.github.io/files/Resume_6_18_18.pdf">Resume</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+
+<!-- ==========================
+        SERVICE SECTION
+        =========================== -->
+        <section class="features text-center section-padding" id="service">
+          <div class="container">
+        <!-- Headline -->
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="arrow">What defines me</h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+          <div class="services">
+          <!-- Service Box 1 -->
+                  <div class="col-md-4 wp2 item">
+                    <div class="icon">
+                      <i class="fa fa-graduation-cap"></i><!-- Icon -->
+                    </div>
+                    <h2>Applied Mathematician</h2><!-- Title -->
+                    <p>
+                    </p><!-- Description -->
+                  </div>
+          <!-- Service Box 2 -->
+                  <div class="col-md-4 wp2 item delay-05s">
+                    <div class="icon">
+                      <i class="fa fa-paper-plane"></i><!-- Icon -->
+                    </div>
+                    <h2>Traveler</h2><!-- Title -->
+                    <p>
+                    </p><!-- Description -->
+                  </div>
+          <!-- Service Box 3 -->
+                  <div class="col-md-4 wp2 item delay-1s">
+                    <div class="icon">
+                      <i class="fa fa-trophy"></i><!-- Icon -->
+                    </div>
+                    <h2>Snowboarder</h2><!-- Title -->
+                    <p>
+                    </p><!-- Description -->
+                  </div>
+          </div>
+                  <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+
+
+		<div class="container-fluid">
+		    <!-- About 1 -->
+			<div class="row color-bg">
+				<div class="col-md-6 nopadding features-intro-img">
+					<div class="about-image" style="background-image:url(img/about1.png)"></div><!-- about image 1 -->
 				</div>
-				<div class="grid-3">
-					<h1>Project Spotlight</h1>
+				<div class="col-md-6 about-text">
+					<h6>Mathematics</h6><!-- headline-->
 					<p>
-						Give a brief description of what this project is and what role you played. It can also be helpful to include a link
-					</p>
-					<a href="#">View Project</a>
+            I studied Applied Mathematics intensively and Bachelor's at <a href="https://msudenver.edu/math/">MSU Denver</a> and my Master's at <a href = "https://www.math.ubc.ca/">University of British Columbia</a> where
+            my master thesis was written on the study of non-smooth slowly varying tipping point. I applied this to a model for ocean currents and the implications could help better understand our own weather patterns and
+            help us to prepare for abrupt changes in the governing dynamics.<br>
+            While pursuing my interests, I found myself analyzing spatio-temporal trends with <a href ="https://groundworkusa.org/spotlight/a-watershed-plan-is-born/">Groundwork Denver</a>,
+            discovering hidden relations signaling failure inside mining truck with <a href = "http://www.ssrmining.com/">SSR Mining</a>,
+            and even understanding the causes of child vulnerability with <a href = "http://www.childrenspartnershipsurreywr.com/">Children's Partnership of Surrey</a>.
+
+          </p><br><!-- About Text 1 -->
+					<a href="index.html#team" class="weight-outline-btn">Read more</a><!-- read more button  -->
+				</div>
+			</div>
+			<!-- About 2 -->
+			<div class="row">
+				<div class="col-md-6 about-text">
+					<h6>Travels</h6><!-- Headline -->
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p><br><!-- About Text 2 -->
+					<a href="index.html#team" class="weight-outline-btn">Read more</a>	<!-- read more button  -->
+				</div>
+				<div class="col-md-6 nopadding features-intro-img">
+					<div class="about-image" style="background-image:url(img/about2.png)"></div><!-- about image 2 -->
+				</div>
+			</div>
+			<!-- About 3 -->
+			<div class="row color-bg">
+				<div class="col-md-6 nopadding features-intro-img">
+					<div class="about-image" style="background-image:url(img/about3.png)"></div><!-- about image 3 -->
+				</div>
+				<div class="col-md-6 about-text">
+					<h6>Snowboarding</h6><!-- Headline-->
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p><br><!-- About Text 3 -->
+					<a href="index.html#team" class="weight-outline-btn">Read more</a><!-- read more button  -->
 				</div>
 			</div>
 		</div>
-	</section>
+		<!-- ==========================
+        ABOUT SECTION END
+        =========================== -->
 
 
-	<!-- New container-->
-	<div class="container">
-		<h1 class="center">Education</h1>
-		<section class="education">
-			<h2>M.Sc. Applied Mathematics from the University of British Columbia.</h2>
-			<h2>B.Sc. Applied Mathematics from Metropolitan State University of Denver.</h2>
-		</section>
 
-		<hr>
 
-		<!--Experience Tables-->
+		<!-- ==========================
+        PORTFOLIO SECTION
+    =========================== -->
+        <section class="swag text-center" id="portfolio">
+          <div class="container">
+		    <!-- Headline -->
+            <div class="row">
+              <h1 class="arrow">
+                Recent <span>Projects</span>
+              </h1>
+            </div>
+          </div>
+        </section>
 
-		<section class="experience">
+        <div class="container">
+          <div class="row row-offset-0">
+
+          <!-- PORTFOLIO ITEM 1 -->
+          <div class="col-md-3 col-sm-6">
+              <div class="overlay-effect effects clearfix">
+                  <div class="img">
+                      <a href="img/portfolio/portfolio-01-large.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-01-thumbnail.jpg" alt="Portfolio Item"></a>
+                  </div>
+              </div>
+          </div>
+  	    <!-- PORTFOLIO ITEM END -->
+
+  	    <!-- PORTFOLIO ITEM 2 -->
+          <div class="col-md-3 col-sm-6">
+              <div class="overlay-effect effects clearfix">
+                  <div class="img">
+                      <a href="img/portfolio/portfolio-02-large.jpg" data-lightbox="roadtrip" title="Project Two - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-02-thumbnail.jpg" alt="Portfolio Item"></a>
+                  </div>
+              </div>
+          </div>
+  	    <!-- PORTFOLIO ITEM END -->
+
+  		<!-- PORTFOLIO ITEM 3 -->
+          <div class="col-md-3 col-sm-6">
+              <div class="overlay-effect effects clearfix">
+                  <div class="img">
+                      <a href="img/portfolio/portfolio-03-large.jpg" data-lightbox="roadtrip" title="Project Three - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-03-thumbnail.jpg" alt="Portfolio Item"></a>
+                  </div>
+              </div>
+          </div>
+  	    <!-- PORTFOLIO ITEM END -->
+
+  		<!-- PORTFOLIO ITEM 4 -->
+          <div class="col-md-3 col-sm-6 ">
+              <div class="overlay-effect effects clearfix">
+                  <div class="img">
+                      <a href="img/portfolio/portfolio-04-large.jpg" data-lightbox="roadtrip" title="Project Four - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-04-thumbnail.jpg" alt="Portfolio Item"></a>
+                  </div>
+              </div>
+          </div>
+  	    <!-- PORTFOLIO ITEM END -->
+
+          <!-- PORTFOLIO ITEM 5 -->
+          <div class="col-md-3 col-sm-6 ">
+              <div class="overlay-effect effects clearfix">
+                  <div class="img">
+                      <a href="img/portfolio/portfolio-05-large.jpg" data-lightbox="roadtrip" title="Project Five - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-05-thumbnail.jpg" alt="Portfolio Item"></a>
+                  </div>
+              </div>
+          </div>
+  	    <!-- PORTFOLIO ITEM END -->
+
+  	    <!-- PORTFOLIO ITEM 6 -->
+          <div class="col-md-3 col-sm-6">
+              <div class="overlay-effect effects clearfix">
+                  <div class="img">
+                      <a href="img/portfolio/portfolio-06-large.jpg" data-lightbox="roadtrip" title="Project Six - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-06-thumbnail.jpg" alt="Portfolio Item"></a>
+                  </div>
+              </div>
+          </div>
+  	    <!-- PORTFOLIO ITEM END -->
+
+  		<!-- PORTFOLIO ITEM 7 -->
+          <div class="col-md-3 col-sm-6">
+              <div class="overlay-effect effects clearfix">
+                  <div class="img">
+                      <a href="img/portfolio/portfolio-07-large.jpg" data-lightbox="roadtrip" title="Project Seven - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-07-thumbnail.jpg" alt="Portfolio Item"></a>
+                  </div>
+              </div>
+          </div>
+  	    <!-- PORTFOLIO ITEM END -->
+
+  		<!-- PORTFOLIO ITEM 8 -->
+          <div class="col-md-3 col-sm-6">
+              <div class="overlay-effect effects clearfix">
+                  <div class="img">
+                      <a href="img/portfolio/portfolio-08-large.jpg" data-lightbox="roadtrip" title="Project Eight - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-08-thumbnail.jpg" alt="Portfolio Item"></a>
+                  </div>
+              </div>
+          </div>
+  	    <!-- PORTFOLIO ITEM END -->
+        </div><!--/row-->
+      </div><!--/.container-->
+		<!-- ==========================
+        PORTFOLIO SECTION END
+        =========================== -->
+
+
+
+
+		<!-- ==========================
+        CUSTOM SPACER
+        =========================== -->
+	<!--	<div class="spacer-cta text-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <a href="index.html#contact" class="outline-btn">hire john doe</a>
+              </div>
+            </div>
+          </div>
+        </div>-->
+		<!-- ==========================
+        CUSTOM SPACER END
+        =========================== -->
+
+
+
+    <!-- ==========================
+        BLOG SECTION
+        =========================== -->
+    <section class="text-center section-padding" id="blog">
+          <div class="container">
+        <!-- Headline -->
+        <div class="row">
+              <div class="col-md-12">
+                <h1 class="arrow"> <span>Experience</span></h1>
+              </div>
+            </div><br><br>
+
+      <!-- Blog Slider -->
+            <div class="row">
+              <div id="blogSlider">
+                <ul class="slides">
+                  <li>
+            <!-- Blog Entry 1 -->
+                    <div class="col-md-4 wp4">
+                      <div class="overlay-effect effects clearfix">
+                        <div class="img">
+                          <img src="img/blog1.jpg" class="grayscale" alt="Blog Item"><!-- Blog Image -->
+                        </div>
+                      </div>
+            <br>
+                      <h2>908 Devices</h2><!-- Headline -->
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p><!-- Description-->
+                    </div>
+          <!-- Blog Entry 2 -->
+                    <div class="col-md-4 wp4 delay-05s">
+                      <div class="overlay-effect effects clearfix">
+                        <div class="img">
+                          <img src="img/blog2.jpg" class="grayscale" alt="Blog Item"><!-- Blog Image -->
+                        </div>
+                      </div>
+            <br>
+                      <h2>Creative Hearts</h2><!-- Headline -->
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p><!-- Description -->
+                    </div>
+          <!-- Blog Entry 3 -->
+                    <div class="col-md-4 wp4 delay-1s">
+                      <div class="overlay-effect effects clearfix">
+                        <div class="img">
+                          <img src="img/blog3.jpg"  class="grayscale" alt="Blog Item"><!-- Blog Image -->
+                        </div>
+                      </div>
+            <br>
+                      <h2>Creative Ideas</h2><!-- Headline -->
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p><!-- Description-->
+                    </div>
+                  </li>
+                  <li>
+            <!-- Blog Entry 4 -->
+                    <div class="col-md-4 wp4">
+                      <div class="overlay-effect effects clearfix">
+                        <div class="img">
+                          <img src="img/blog1.jpg" class="grayscale" alt="Blog Item"><!-- Blog Image -->
+                        </div>
+                      </div>
+            <br>
+                      <h2>Creative Minds</h2><!-- Headline -->
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p><!-- Description -->
+                    </div>
+          <!-- Blog Entry 5 -->
+                    <div class="col-md-4 wp4 delay-05s">
+                      <div class="overlay-effect effects clearfix">
+                        <div class="img">
+                          <img src="img/blog2.jpg" class="grayscale" alt="Blog Item"><!-- Blog Image -->
+                        </div>
+                      </div>
+            <br>
+                      <h2>Creative Hearts</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                    </div>
+          <!-- Blog Entry 6 -->
+                    <div class="col-md-4 wp4 delay-1s">
+                      <div class="overlay-effect effects clearfix">
+                        <div class="img">
+                          <img src="img/blog3.jpg" class="grayscale" alt="Blog Item"><!-- Blog Image -->
+                        </div>
+                      </div>
+            <br>
+                      <h2>Creative Ideas</h2><!-- Headline -->
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p><!-- Description -->
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+    <!-- ==========================
+        BLOG SECTION END
+        =========================== -->
+
+
+
+
+
+
+
+		<!-- ==========================
+        CONTACT SECTION
+        =========================== -->
+        <section class="text-center section-padding contact-wrap" id="contact">
+		  <!-- To Top Button -->
+          <a href="index.html#top" class="up-btn"><i class="fa fa-chevron-up"></i></a>
+          <div class="container">
+		    <!-- Headline -->
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="arrow">Drop <span>me</span> a line</h1>
+              </div>
+            </div>
+            <div class="row contact-details">
+			  <!-- Adress Box -->
+              <div class="col-md-4">
+                <div class="dark-box box-hover">
+                  <h2><i class="fa fa-map-marker"></i><span>Address</span></h2>
+                  <p>23 Ipsum street, New York</p>
+                </div>
+              </div>
+			  <!-- Phone Number Box -->
+              <div class="col-md-4">
+                <div class="dark-box box-hover">
+                  <h2><i class="fa fa-mobile"></i><span>Phone</span></h2>
+                  <p>+12 345 6789</p>
+                </div>
+              </div>
+			  <!-- E-Mail Box -->
+              <div class="col-md-4">
+                <div class="dark-box box-hover">
+                  <h2><i class="fa fa-paper-plane"></i><span>Email</span></h2>
+                  <p><a href="&#099;&#111;&#100;&#121;&#046;&#103;&#114;&#105;&#102;&#102;&#105;&#116;&#104;&#057;&#052;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">&#099;&#111;&#100;&#121;&#046;&#103;&#114;&#105;&#102;&#102;&#105;&#116;&#104;&#057;&#052;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</a></p>
+                </div>
+              </div>
+            </div>
 			<div class="row">
-				<h1 class="center">Experience</h1>
-				<div class="grid-2">
-					<h2>Research Scientist </h2>
-					<p>
-						<img src="img/908_logo.png" style="float: left; width:250px;height:90px;margin-right:15px;">
-						908 Devices
-						<br>
-						Dec. 2018 - Current
-					</p>
-				</div>
-				<div class="grid-4">
-					<ul>
-						<li>Build effective algorithms to aid in mass spectrometry research.</li>
-						<li>Create internal front-end usability for data analysis with said algorithms.</li>
-						<li>Apply cutting edge statistical models to algorithm performance to tune it's capabilities to project specific needs.</li>
-					</ul>
-				</div>
+			  <!-- Google Maps (Change your Settings below) -->
+			  <div class="col-md-6">
+			    <div id="googlemaps"></div>
+			  </div>
+			  <!-- Contact Form -->
+			  <div class="col-md-6 contact">
+			     <form role="form">
+				            <!-- Name -->
+                            <div class="row">
+                                <div class="col-md-6">
+								    <!-- E-Mail -->
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Your name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+								    <!-- Phone Number -->
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email address">
+                                    </div>
+                                </div>
+                            </div>
+							<!-- Message Area -->
+                            <div class="form-group">
+                                <textarea class="form-control" placeholder="Write you message here..." style="height:232px;"></textarea>
+                            </div>
+							<!-- Subtmit Button -->
+                            <button type="submit" class="btn btn-send">
+                                Send message
+                            </button>
+                        </form>
+			  </div>
 			</div>
-			<div class="row">
-				<div class="grid-2">
-					<h2>Researcher</h2>
-					<p>
-						<img src="img/ubc_logo.png" style="float: center; width:75px;height:100px;margin-right:15px;">
-						<br>
-						University of British Columbia
-						<br>
-						Sept. 2016 - Sept. 2018
-					</p>
-				</div>
-				<div class="grid-4">
-					<ul>
-						<li>Researched asymptotic behavior in non-smooth dynamical systems to extract tipping behavior. Applied this method
-							to the two-component Stommel Model.
-							 <a href="https://open.library.ubc.ca/cIRcle/collections/ubctheses/24/items/1.0371123">Thesis</a></li>
-						<li>Peformed the statistical analysis involved in dump truck failures for SSR mining.</li>
-						<li>Partnered with Microsoft and the city of Surrey to build an interactive application for spatial data analysis.
-							<a href="https://mathnstein.shinyapps.io/dssg_app/">Shiny DSSG App</a><br /></li>
-					</ul>
-				</div>
-			</div>
-			<div class="row">
-				<div class="grid-2">
-					<h2>Tutor/Researcher</h2>
-					<p>
-						<img src="img/msud_logo.png" style="float: right; width:200px;height:100px;margin-right:15px;">
-						<br>
-						Metropolitan State University of Denver
-						<br>
-						Aug. 2012 - Aug. 2016
-					</p>
-				</div>
-				<div class="grid-4">
-					<ul>
-						<li>Initiated the statistical analysis on a local river partnered with the non-profit Groundwork Denver.</li>
-						<li>Presented several talks at conferences such as the Joint Mathematical Meetings, Annual Symposium at NCAR, and regional meetings.</li>
-						<li>Involved with numerous mathematical competitions/projects. Most notably, Meritorious Winner of the 2016 Mathematical Competition in Modelling.</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-
-		<hr>
-
-		<section>
-			<!--List of skills-->
-			<div class="row">
-				<div class="grid-2">
-					<h1>Programming Languages</h1>
-					<ul>
-						<li>Python</li>
-						<li>Matlab</li>
-						<li>R</li>
-						<li>Julia</li>
-						<li>Git</li>
-						<li>Latex</li>
-					</ul>
-				</div>
-
-				<div class="grid-4">
-					<h1>Contact</h1>
-					<p>
-						I'm always interested in cool side projects that lead to cool developments.
-						Please feel free to reach out to my personal email at <A HREF="mailto:
-						&#099;&#111;&#100;&#121;&#046;&#103;&#114;&#105;&#102;&#102;&#105;&#116;&#104;&#057;&#052;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">
-						&#099;&#111;&#100;&#121;&#046;&#103;&#114;&#105;&#102;&#102;&#105;&#116;&#104;&#057;&#052;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;
-					</A>
-				</div>
-			</div>
-		</section>
+			<br>
+			<!-- Social Buttons - use font-awesome, past in what you want -->
+            <div class="row">
+              <div class="col-md-12">
+                <ul class="social-buttons">
+                  <li><a href="index.html#" class="social-btn"><i class="fa fa-dribbble"></i></a></li><!-- dribble -->
+                  <li><a href="index.html#" class="social-btn"><i class="fa fa-twitter"></i></a></li><!-- twitter -->
+                  <li><a href="index.html#" class="social-btn"><i class="fa fa-facebook"></i></a></li><!-- facebook -->
+				  <li><a href="index.html#" class="social-btn"><i class="fa fa-deviantart"></i></a></li><!-- deviantart -->
+				  <li><a href="index.html#" class="social-btn"><i class="fa fa-youtube"></i></a></li><!-- youtube -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+		<!-- ==========================
+        CONTACT SECTION END
+        =========================== -->
 
 
 
-		<!--Footer-->
-		<footer class="center">
-			<hr>
-			<span>&copy; Cody Griffith 2018</span>
-		</footer>
+		<!-- ==========================
+        FOOTER SECTION
+        =========================== -->
+        <footer>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <p>All Rights Reserved. &copy; 2015 <a href="http://www.themewagon.com">ThemeWagon</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+		<!-- ==========================
+        FOOTER SECTION END
+        =========================== -->
 
-	</div><!-- End Container -->
 
-</body>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- SmoothScroll -->
+    <script type="text/javascript" src="assets/smoothscroll/smoothscroll.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/waypoints.min.js"></script>
+    <!-- classie.js -->
+	<script src="js/classie.js"></script>
+    <!-- FlexSlider -->
+    <script src="assets/flexslider/jquery.flexslider.js"></script>
+	<!-- Modernizr -->
+    <script src="js/modernizr.js"></script>
+	<!-- Text Rotator -->
+	<script src="assets/textrotator/jquery.simple-text-rotator.js"></script>
+	<!-- Lightbox.js -->
+    <script src="assets/lightbox/js/lightbox.min.js"></script>
+    <!-- Google Maps -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeKBBPJTG3v5w3cNPAgM6ZsJiPyL1mP_o&amp;sensor=false"></script>
+	<!-- Theme JavaScript Core -->
+	<script src="js/main.js"></script>
+	<script src="js/script.js"></script>
+
+	<!-- GOOGLE MAPS DATA -->
+    <script type="text/javascript">
+    // When the window has finished loading create our google map below
+        google.maps.event.addDomListener(window, 'load', init);
+
+        function init() {
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions = {
+                // How zoomed in you want the map to start at (always required)
+                zoom: 15,
+
+                scrollwheel: false,
+
+                // The latitude and longitude to center the map (always required)
+                center: new google.maps.LatLng(40.68961985411178, -74.01618003845215), // New York
+
+                // How you would like to style the map.
+                // This is where you would paste any style found on Snazzy Maps.
+                styles: [	{		featureType:'water',		stylers:[{color:'#F2F2F2'},{visibility:'on'}]	},{		featureType:'landscape',		stylers:[{color:'#FFFFFF'}]	},{		featureType:'road',		stylers:[{saturation:-100},{lightness:45}]	},{		featureType:'road.highway',		stylers:[{visibility:'simplified'}]	},{		featureType:'road.arterial',		elementType:'labels.icon',		stylers:[{visibility:'off'}]	},{		featureType:'administrative',		elementType:'labels.text.fill',		stylers:[{color:'#ADADAD'}]	},{		featureType:'transit',		stylers:[{visibility:'off'}]	},{		featureType:'poi',		stylers:[{visibility:'off'}]	}]
+            };
+
+            // Get the HTML DOM element that will contain your map
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('googlemaps');
+
+            // Create the Google Map using out element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+        }
+
+    </script>
+
+	<!-- TEXT ROTATOR SETTINGS -->
+    <script type="text/javascript">
+    $(".rotate").textrotator({
+      animation: "fade", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
+      separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
+      speed: 2000 // How many milliseconds until the next word show.
+    });
+    </script>
+
+    </body>
 </html>
