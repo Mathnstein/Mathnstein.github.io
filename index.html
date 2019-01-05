@@ -21,16 +21,16 @@
 	<!-- Animations -->
     <link href="css/animate.css" rel="stylesheet">
 	<!-- Custom Favicon -->
-	<link href="img/icon.ico" rel="shortcut icon" type="image/x-icon" />
+	<link href="img/logo.ico" rel="shortcut icon" type="image/x-icon" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="assets/html5shiv/html5shiv.js"></script>
     <script src="assets/respond/respond.min.js"></script>
     <![endif]-->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
-	integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-	crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""/>
 
   </head>
     <body id="top">
@@ -209,7 +209,13 @@
 					<a href="index.html#team" class="weight-outline-btn">Read more</a>	<!-- read more button  -->
 				</div>
 				<div class="col-md-6 nopadding features-intro-img">
-					<div class="about-image" style="background-image:url(img/about2.png)"></div><!-- about image 2 -->
+          <!-- TravelMap -->
+          <iframe src="https://cody-griffith.travelmap.net"
+             width="100%"
+             height="500"
+             frameborder="0"
+             allowfullscreen>
+          </iframe>
 				</div>
 			</div>
 			<!-- About 3 -->
@@ -497,6 +503,7 @@
 			    <div id="leaflet"></div>
 			  </div>
 			<br>
+
 			<!-- Social Buttons - use font-awesome, past in what you want -->
             <div class="row">
               <div class="col-md-12">
@@ -553,9 +560,9 @@
 	<!-- Lightbox.js -->
     <script src="assets/lightbox/js/lightbox.min.js"></script>
     <!-- Leaflet Maps -->
-		<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
-   	integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
-   	crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+      crossorigin=""></script>
 	<!-- Theme JavaScript Core -->
 	<script src="js/main.js"></script>
 	<script src="js/script.js"></script>
@@ -563,7 +570,7 @@
 	<!-- GOOGLE MAPS DATA -->
     <script type="text/javascript">
     // When the window has finished loading create our google map below
-		var mymap = L.map('leaflet').setView([37.3541, -121.9552], 13);
+		var mymap = L.map('leaflet').setView([37.3541, -121.9552], 8);
 
 		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiY29keWc5NCIsImEiOiJjanFqODhmcmcwN3hnM3hvMmd4bTJsdW9lIn0.uWbDO4IyniCENZyo3ItRTg', {
 		maxZoom: 18,
@@ -572,6 +579,9 @@
 			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 		id: 'mapbox.streets'
 	}).addTo(mymap);
+
+    var marker = L.marker([37.3541, -121.9552]).addTo(mymap);
+    marker.bindPopup("<b>Santa Clara</b>").openPopup();
 
     </script>
 
