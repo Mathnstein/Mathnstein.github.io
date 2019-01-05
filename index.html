@@ -28,6 +28,10 @@
     <script src="assets/html5shiv/html5shiv.js"></script>
     <script src="assets/respond/respond.min.js"></script>
     <![endif]-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+	integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+	crossorigin=""/>
+
   </head>
     <body id="top">
 
@@ -490,7 +494,7 @@
 			<div class="row">
 			  <!-- Google Maps (Change your Settings below) -->
 			  <div class="col-md-12">
-			    <div id="googlemaps"></div>
+			    <div id="leaflet"></div>
 			  </div>
 			<br>
 			<!-- Social Buttons - use font-awesome, past in what you want -->
@@ -520,7 +524,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-12 text-center">
-                <p>All Rights Reserved. &copy; 2015 <a href="http://www.themewagon.com">ThemeWagon</a>
+                <p>All Rights Reserved. &copy; 2019 Cody Griffith</a>
               </div>
             </div>
           </div>
@@ -531,7 +535,10 @@
 
 
     <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+   	integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+   	crossorigin=""></script>
     <!-- SmoothScroll -->
     <script type="text/javascript" src="assets/smoothscroll/smoothscroll.js"></script>
     <!-- Bootstrap -->
@@ -548,41 +555,25 @@
 	<script src="assets/textrotator/jquery.simple-text-rotator.js"></script>
 	<!-- Lightbox.js -->
     <script src="assets/lightbox/js/lightbox.min.js"></script>
-    <!-- Google Maps -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeKBBPJTG3v5w3cNPAgM6ZsJiPyL1mP_o&amp;sensor=false"></script>
+    <!-- Leaflet Maps -->
+		<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+   	integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+   	crossorigin=""></script>
 	<!-- Theme JavaScript Core -->
 	<script src="js/main.js"></script>
 	<script src="js/script.js"></script>
 
 	<!-- GOOGLE MAPS DATA -->
-    <script type="text/javascript">
+    <script>
     // When the window has finished loading create our google map below
-        google.maps.event.addDomListener(window, 'load', init);
+		var mymap = L.map('leaflet').setView([37.3541, -121.9552], 13);
 
-        function init() {
-            // Basic options for a simple Google Map
-            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-            var mapOptions = {
-                // How zoomed in you want the map to start at (always required)
-                zoom: 10,
-
-                scrollwheel: false,
-
-                // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(37.3541, -121.9552), // Santa Clara
-
-                // How you would like to style the map.
-                // This is where you would paste any style found on Snazzy Maps.
-                styles: [	{		featureType:'water',		stylers:[{color:'#F2F2F2'},{visibility:'on'}]	},{		featureType:'landscape',		stylers:[{color:'#FFFFFF'}]	},{		featureType:'road',		stylers:[{saturation:-100},{lightness:45}]	},{		featureType:'road.highway',		stylers:[{visibility:'simplified'}]	},{		featureType:'road.arterial',		elementType:'labels.icon',		stylers:[{visibility:'off'}]	},{		featureType:'administrative',		elementType:'labels.text.fill',		stylers:[{color:'#ADADAD'}]	},{		featureType:'transit',		stylers:[{visibility:'off'}]	},{		featureType:'poi',		stylers:[{visibility:'off'}]	}]
-            };
-
-            // Get the HTML DOM element that will contain your map
-            // We are using a div with id="map" seen below in the <body>
-            var mapElement = document.getElementById('googlemaps');
-
-            // Create the Google Map using out element and options defined above
-            var map = new google.maps.Map(mapElement, mapOptions);
-        }
+		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.streets',
+    accessToken: 'pk.eyJ1IjoiY29keWc5NCIsImEiOiJjanFqODhmcmcwN3hnM3hvMmd4bTJsdW9lIn0.uWbDO4IyniCENZyo3ItRTg'
+}).addTo(mymap);
 
     </script>
 
