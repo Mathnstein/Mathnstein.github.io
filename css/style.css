@@ -290,7 +290,7 @@ table {
 .vert-align {
    position: center center;
    top: 50%;
-   transform: translateY(-50%);
+   transform: translateY(-5%);
    margin: 0 auto;
  }
  .vert-align table, th, td {
