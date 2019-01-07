@@ -293,6 +293,13 @@ table {
    transform: translateY(-5%);
    margin: 0 auto;
  }
+ .horz-align {
+    position: center center;
+    top: 50%;
+    transform: translateX(-5%);
+    margin: 0 auto;
+  }
+
  .vert-align table, th, td {
   border-collapse: collapse;
 }
