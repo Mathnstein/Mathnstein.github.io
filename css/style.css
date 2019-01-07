@@ -291,6 +291,7 @@ table {
    position: center center;
    top: 50%;
    transform: translateY(-50%);
+   margin: 0 auto;
  }
  .vert-align table, th, td {
   border-collapse: collapse;
