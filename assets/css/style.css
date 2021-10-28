@@ -879,7 +879,7 @@ footer .credits a {
   transform: rotate(180deg);
 }
 
-.bottom-waves svg {
+.bottom-waves img {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
@@ -896,7 +896,7 @@ footer .credits a {
   line-height: 0;
 }
 
-.top-waves svg {
+.top-waves img {
   position: relative;
   display: block;
   width: calc(120% + 1.3px);
