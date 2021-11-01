@@ -206,15 +206,7 @@ label {
   border-radius: 0%;
 }
 
-#in {
-  padding: 2px;
-}
-
-#gh {
-  padding: 2px;
-}
-
-#fb {
+.socials span {
   padding: 2px;
 }
 
