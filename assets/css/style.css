@@ -581,7 +581,7 @@ label {
   height: 100vh;
   position: relative;
   color: #fff;
-  background-image: url("/assets/img/hero_center.png");
+  background-image: url("/assets/img/Misc/hero_center-min.png");
 }
 
 .hero .hero-content {
@@ -626,7 +626,7 @@ label {
 
 @media (min-width: 768px) {
   .hero {
-    background-image: url("/assets/img/hero.png");
+    background-image: url("/assets/img/Misc/hero-min.png");
   }
 
   .hero .hero-title {
