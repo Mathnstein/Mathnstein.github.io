@@ -15,12 +15,12 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 body {
   background: var(--background-color);
   color: var(--secondary-color);
   font-family: 'Roboto', sans-serif;
   width: 100%;
-  overflow-x: hidden;
 }
 
 h1,
