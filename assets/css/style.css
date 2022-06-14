@@ -294,13 +294,14 @@ label {
     display: inline-block;
     z-index: 996;
     color: white;
-    font-size: 28px;
-    width: 40px;
-    height: 40px;
     border-radius: 50px;
     border: 2px solid white;
     -webkit-animation: pulse 2s infinite;
     animation: pulse 2s infinite;
+}
+
+.scroll-down i {
+    font-size: 28px;
 }
 
 .scroll-down:hover {
