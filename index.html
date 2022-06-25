@@ -95,7 +95,10 @@
             <div class="table-cell">
                 <div class="container">
                     <h1 class="hero-title mb-4">Cody Griffith</h1>
-                    <p class="hero-subtitle"><span class="typed" data-typed-items="Mathematician, Developer, Traveler, Snowboarder"></span></p>
+                    <p class="hero-subtitle">
+                        <span id="typed-wrapper"></span>
+                    </p>
+                    <!-- <p class="hero-subtitle"><span class="typed" data-typed-items=""></span></p> -->
                     <a target="_blank" rel="noopener noreferrer" class="button button-big button-rouded" href="assets/docs/cv.pdf">View CV</a>
                     <br>
                     <!-- <i class="bi bi-arrow-down-short scroll-down" data-aos="fade-up">
@@ -976,13 +979,7 @@
                             </span>
                                                     </a>
                                                 </li>
-                                                <li>
-                                                    <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/cody.griffith.10">
-                                                        <span id="fb" class="ico-circle">
-                              <i class="bi bi-facebook"></i>
-                            </span>
-                                                    </a>
-                                                </li>
+
                                                 <li>
                                                     <a href="https://blog-germany-immigration.web.app/" target="_blank" rel="noopener noreferrer">
                                                         <span id="wp" class="ico-circle">
@@ -1031,13 +1028,22 @@
     <!-- JS Files -->
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js" integrity="sha512-zKaK6G2LZC5YZTX0vKmD7xOwd1zrEEMal4zlTf5Ved/A1RrnW+qt8pWDfo7oz+xeChECS/P9dv6EDwwPwelFfQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
             easing: 'ease-out-back',
             duration: 1000
         });
+    </script>
+    <!-- Typed JS loop -->
+    <script>
+        new Typed("#typed-wrapper", {
+            strings: ["Mathematician.", "Developer.", "Traveler.", "Snowboarder."],
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 100,
+            loop: true
+        })
     </script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
