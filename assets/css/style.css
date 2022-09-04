@@ -688,7 +688,7 @@ label {
     height: 100vh;
     position: relative;
     color: #fff;
-    background-image: url("/assets/img/Misc/hero_center-min.png");
+    background-image: url("../img/Misc/hero_center-min.webp");
 }
 
 .hero .hero-content {
@@ -735,7 +735,7 @@ label {
 
 @media (min-width: 768px) {
     .hero {
-        background-image: url("/assets/img/Misc/hero-min.png");
+        background-image: url("../img/Misc/hero-min.webp");
     }
     .hero .hero-title {
         font-size: 4.5rem;
