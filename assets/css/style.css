@@ -969,9 +969,9 @@ label {
 # Sliders
 --------------------------------------------------------------*/
 
+
 .photography * {
     max-width: 100%;
-    padding: 0 !important;
 }
 
 .photography .row {
@@ -995,6 +995,7 @@ label {
     height: auto;
     width: 100%;
     max-height: 90vh;
+    border-radius: 20px;
 }
 
 .swiper-pagination {
