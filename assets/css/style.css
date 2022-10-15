@@ -17,6 +17,29 @@
 # General
 --------------------------------------------------------------*/
 
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+    position: fixed;
+}
+
+ ::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: var(--glass-gradiant);
+    border-radius: 10px;
+    opacity: .9;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background-color: lightgray;
+}
+
 body {
     background: var(--background-color);
     color: var(--secondary-color);
@@ -50,12 +73,68 @@ label {
     }
 }
 
+
+/* Lightbox css */
+
 .glightbox-desc {
     display: none !important;
 }
 
-.glightbox-desc p {
-    color: black !important;
+.desc-left .gslide-image img,
+.desc-right .gslide-image img {
+    border-radius: 20px
+}
+
+.glightbox-clean .gslide-description {
+    background: transparent;
+}
+
+.gdesc-inner {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.glightbox-clean .gslide-title {
+    text-align: center;
+    color: white;
+}
+
+.gslide-desc {
+    color: white;
+    overflow: auto;
+}
+
+.gbtn {
+    background: var(--glass-gradiant);
+}
+
+.glightbox-clean .gprev,
+.glightbox-clean .gnext {
+    top: unset;
+    opacity: .7;
+    bottom: 10px;
+}
+
+.glightbox-clean .gprev:hover,
+.glightbox-clean .gnext:hover {
+    opacity: 1;
+}
+
+@media (max-width: 769px) {
+    /* Justify top, unset absolute text, hide buttons */
+    .glightbox-container .ginner-container {
+        justify-content: flex-start;
+        height: 100%;
+    }
+    .glightbox-mobile .glightbox-container .gslide-description {
+        position: unset;
+    }
+    .glightbox-clean .gprev,
+    .glightbox-clean .gnext {
+        display: none;
+    }
 }
 
 .overlay-mf {
