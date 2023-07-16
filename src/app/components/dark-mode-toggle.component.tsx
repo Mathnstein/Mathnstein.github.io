@@ -1,7 +1,8 @@
-import { styled } from "@mui/material";
+"use-client";
+import { styled, useTheme } from "@mui/material";
 import Switch from "@mui/material/Switch";
-import { customColorScheme } from "app/hooks/useColorScheme.hook";
-import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { ColorModeContext } from "./theme-handler.component";
 
 const DarkModeSwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -50,18 +51,19 @@ const DarkModeSwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-export const DarkModeToggle = () => {
-  const { mode, setMode } = customColorScheme();
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-  const isDark = mode === "dark";
+export function DarkModeToggle() {
+  const theme = useTheme();
+  const colorMode = useContext(ColorModeContext);
+
+  const isDark = theme.palette.mode === "dark";
   return (
     <DarkModeSwitch
       checked={isDark}
-      onChange={({ target }) => setMode(target.checked ? "dark" : "light")}
-      aria-label="Dark mode toggle"
+      onChange={({ target }) =>
+        colorMode.toggleColorMode(target.checked ? "dark" : "light")
+      }
+      aria-label="toggle dark mode"
+      theme={theme}
     ></DarkModeSwitch>
   );
-};
+}

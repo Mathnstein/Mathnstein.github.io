@@ -2,20 +2,24 @@ import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
 import ContactPageOutlinedIcon from "@mui/icons-material/ContactPageOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import MenuOutlined from "@mui/icons-material/MenuOutlined";
-import { Experimental_CssVarsProvider } from "@mui/material";
+import QuestionAnswerOutlinedIcon from "@mui/icons-material/QuestionAnswerOutlined";
+import { MenuItem, useTheme } from "@mui/material";
 import AppBar from "@mui/material/AppBar/AppBar";
 import Box from "@mui/material/Box/Box";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container/Container";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography/Typography";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { DarkModeToggle } from "./dark-mode-toggle.component";
 
 export function MenuBar() {
+  const theme = useTheme();
+  const router = useRouter();
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -29,34 +33,50 @@ export function MenuBar() {
   const navItems = [
     {
       text: "Home",
-      route: "home",
+      route: "/",
       icon: <HomeOutlinedIcon />,
     },
     {
+      text: "About",
+      route: "/about",
+      icon: <QuestionAnswerOutlinedIcon />,
+    },
+    {
       text: "Projects",
-      route: "projects",
+      route: "/projects",
       icon: <ArticleOutlinedIcon />,
     },
     {
       text: "Resume",
-      route: "resume",
+      route: "/resume",
       icon: <ContactPageOutlinedIcon />,
     },
   ];
 
   return (
-    <AppBar position="static">
+    <AppBar
+      position="fixed"
+      sx={{
+        color: "inherit",
+        backgroundColor:
+          theme.palette.mode === "dark"
+            ? theme.palette.info.main
+            : theme.palette.primary.main,
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
+
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="/"
+            component="button"
+            onClick={() => router.push("/")}
             sx={{
-              mr: 2,
               display: { xs: "none", md: "flex" },
+              justifyContent: "center",
+              mr: 2,
               fontFamily: "roboto",
               fontWeight: 700,
               letterSpacing: ".1rem",
@@ -67,53 +87,79 @@ export function MenuBar() {
             Cody's Portfolio
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuOutlined />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {navItems.map((item) => (
-                <MenuItem
-                  key={item.route}
-                  onClick={handleCloseNavMenu}
+          <IconButton
+            edge="start"
+            size="large"
+            id="menu-button"
+            aria-label="menu"
+            aria-controls={Boolean(anchorElNav) ? "menu-button" : undefined}
+            aria-haspopup="true"
+            aria-expanded={Boolean(anchorElNav) ? "true" : undefined}
+            onClick={handleOpenNavMenu}
+            color="inherit"
+            sx={{
+              display: { xs: "flex", md: "none" },
+            }}
+          >
+            <MenuOutlined />
+          </IconButton>
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorElNav}
+            anchorOrigin={{
+              vertical: "top",
+              horizontal: "left",
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "left",
+            }}
+            open={Boolean(anchorElNav)}
+            onClose={handleCloseNavMenu}
+            sx={{
+              display: { xs: "block", md: "none" },
+              backgroundColor: theme.palette.primary.light,
+            }}
+          >
+            {navItems.map((item) => (
+              <MenuItem
+                key={item.route}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                }}
+              >
+                <Link
+                  href={item.route}
+                  onClick={() => router.push(item.route)}
                   className="nav-button"
                 >
                   {item.icon}
                   <Typography textAlign="center">{item.text}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+                </Link>
+              </MenuItem>
+              // <MenuItem
+              //   key={item.route}
+              //   onClick={handleCloseNavMenu}
+              //   className="nav-button"
+              //   sx={{
+              //     display: "flex",
+              //     alignItems: "center",
+              //     gap: "5px",
+              //   }}
+              // >
+
+              // </MenuItem>
+            ))}
+          </Menu>
           {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
-            component="a"
-            href=""
+            component="button"
+            onClick={() => router.push("/")}
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -123,26 +169,37 @@ export function MenuBar() {
               letterSpacing: ".1rem",
               color: "inherit",
               textDecoration: "none",
+              justifyContent: "center",
             }}
           >
             Cody's Portfolio
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              alignItems: "center",
+            }}
+          >
             {navItems.map((item) => (
               <Button
                 key={item.route}
-                onClick={handleCloseNavMenu}
+                onClick={() => router.push(item.route)}
                 className="nav-button"
-                sx={{ my: 2, display: "block" }}
+                sx={{
+                  my: 2,
+                  display: "flex",
+                  color: "inherit",
+                  alignItems: "center",
+                  gap: "5px",
+                }}
               >
                 {item.icon}
                 {item.text}
               </Button>
             ))}
           </Box>
-          <Experimental_CssVarsProvider>
-            <DarkModeToggle />
-          </Experimental_CssVarsProvider>
+          <DarkModeToggle />
         </Toolbar>
       </Container>
     </AppBar>
